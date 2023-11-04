@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Fac_login from './Components/Login/Fac_login';
+import For_pass from './Components/Login/For_pass';
+import Nav from './Components/Nav';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Nav /> */}
+      <Routes>
+        <Route path ='/Fac_login' element={<Fac_login/>}></Route>
+        <Route path ='/For_pass' element={<For_pass/>}></Route>
+      </Routes>
+      
+      
+    </>
+
   );
 }
 
